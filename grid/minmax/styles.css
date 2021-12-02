@@ -1,0 +1,18 @@
+.grid {
+  color: white;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(10, minmax(100px, 1fr));
+  /* minmax([최소 크기], [최대 크기]) */
+  /* 남은 공간 * (이 단위 fr 크기 / 총 fd 크기) = 차지하는 공간 */
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-columns: 100px;
+}
+
+.item:nth-child(odd) {
+  background-color: #2ecc71;
+}
+
+.item:nth-child(even) {
+  background-color: #3498db;
+}

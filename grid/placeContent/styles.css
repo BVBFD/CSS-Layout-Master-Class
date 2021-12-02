@@ -1,0 +1,31 @@
+.grid {
+  background: grey;
+  display: grid;
+  gap: 5px;
+  height: 250vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  /* align-content: space-around; */
+  /* justify-content는 모든 gird를 수평으로 움직임 */
+  /* align-content는 모든 grid를 수직으로 움직임 */
+  place-content: end center;
+  /* place-content: y x */
+  /* place-items는 각 사각형 하나하나에 어떤 걸 적용하는지에 관한것 */
+  /* place-content는 모든 사각형 다 같이 함께에 대한 것 */
+}
+
+.header {
+  background-color: #2ecc71;
+}
+
+.content {
+  background-color: #3498db;
+}
+
+.nav {
+  background-color: #8e44ad;
+}
+
+.footer {
+  background-color: #f39c12;
+}

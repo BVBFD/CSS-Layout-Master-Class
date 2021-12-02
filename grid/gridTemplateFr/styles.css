@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  gap: 5px;
+  height: 50vh;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* fr : fraction grid 안에서 가능한 많은 공간을 차지하면서 반복 */
+  /* grid-template-rows: repeat(4, 1fr); */
+  grid-template:
+    [header-start] "header header header header" 1fr [header-end]
+    [content-start] "content content content nav" 2fr [content-end]
+    [footer-start] "footer footer footer footer" 1fr [footer-end] / 1fr 1fr 1fr 1fr;
+  /* 높이를 먼저 설정하고 그 다음 "/" 다음에 너비 설정 */
+}
+
+.header {
+  background-color: #2ecc71;
+  grid-area: header;
+}
+
+.content {
+  background-color: #3498db;
+  grid-area: content;
+}
+
+.nav {
+  background-color: #8e44ad;
+  grid-area: nav;
+}
+
+.footer {
+  background-color: #f39c12;
+  grid-area: footer;
+}

@@ -1,0 +1,22 @@
+.father {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  /* 첫번째 column, 두번째 column, 세번째 column */
+  grid-template-rows: 100px 50px 300px;
+  /* 첫번째 row, 두번째 row, 세번째 row */
+  /* width 250px */
+  gap: 10px;
+  /* column-gap: 10px;
+    row-gap: 10px; */
+}
+
+.child {
+  flex-basis: 30%;
+  background: peru;
+  color: white;
+  font-size: 50px;
+  /* 그러면 (grid-template-rows 따로 정해주지 않으면) height은 폰트 크기에 따라 달라진다 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
