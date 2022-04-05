@@ -2,12 +2,79 @@
 
 $bg: #fff;
 $title: 32px;
-$fontColor: #000;
+$fontBasicColor: red;
 $fontBold: bolder;
 $hoverColor: #a4ffa4;
+$linkColor:lightcoral; 
+
+// @mixin link($color) {
+//     text-decoration: none;
+//     font-size: 30px;
+//     margin-bottom: 12px;
+//     color: $color;
+//     font-weight: $fontBold;
+//     display: block;
+// }
+
+// .linkBox {
+//     a {
+//         margin-bottom: 10px;
+
+//         &:nth-child(4n + 1) {
+//             @include link($linkColor);
+//         }
+    
+//         &:nth-child(4n + 2) {
+//             @include link(red);
+//         }
+    
+//         &:nth-child(4n + 3) {
+//             @include link(blue);
+//         }
+    
+//         &:nth-child(4n + 4) {
+//             @include link(green);
+//         }
+//     }
+// }
+
+@mixin link($word) {
+    text-decoration: none;
+    font-size: 30px;
+    margin-bottom: 12px;
+    @if $word == 'odd' {
+        color: blue;
+    } @else {
+        color: red;
+    }
+    font-weight: $fontBold;
+    display: block;
+}
+
+%button {
+    border-radius: 7px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background-color: powderblue;
+}
+
+.linkBox {
+    a {
+        margin-bottom: 10px;
+
+        &:nth-child(odd) {
+            @include link("odd");
+        }
+
+        &:nth-child(even) {
+            @include link("even");
+        }
+    }
+}
 
 h2 {
-    color: $fontColor;
+    color: $fontBasicColor;
     font-size: $title;
     font-weight: $fontBold;
 }
@@ -26,7 +93,12 @@ h2 {
     }
 
     button {
+        @extend %button;
         color: red;
         font-weight: $fontBold;
     }
 } 
+
+.byeBtn {
+    @extend %button;
+}
