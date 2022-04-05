@@ -1,0 +1,27 @@
+h2 {
+  color: #000;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.box {
+  margin-top: 20px;
+}
+
+.box:hover {
+  background-color: #a4ffa4;
+}
+
+.box h2 {
+  color: blue;
+}
+
+.box h2:hover {
+  background-color: red;
+}
+
+.box button {
+  color: red;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=styles.css.map */

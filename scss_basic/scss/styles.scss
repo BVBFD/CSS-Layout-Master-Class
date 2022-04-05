@@ -1,0 +1,32 @@
+// @import "_variables";
+
+$bg: #fff;
+$title: 32px;
+$fontColor: #000;
+$fontBold: bolder;
+$hoverColor: #a4ffa4;
+
+h2 {
+    color: $fontColor;
+    font-size: $title;
+    font-weight: $fontBold;
+}
+
+.box {
+    margin-top: 20px;
+    &:hover {
+        background-color: $hoverColor;
+    }
+
+    h2 {
+        color: blue;
+        &:hover {
+            background-color: red;
+        }
+    }
+
+    button {
+        color: red;
+        font-weight: $fontBold;
+    }
+} 
