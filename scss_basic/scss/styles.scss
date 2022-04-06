@@ -7,6 +7,11 @@ $fontBold: bolder;
 $hoverColor: #a4ffa4;
 $linkColor:lightcoral; 
 
+$minIphone: 500px;
+$maxIphone: 690px;
+$minTablet: $minIphone + 1;
+$maxTablet: 1120px;
+
 // @mixin link($color) {
 //     text-decoration: none;
 //     font-size: 30px;
@@ -49,6 +54,40 @@ $linkColor:lightcoral;
     }
     font-weight: $fontBold;
     display: block;
+}
+
+@mixin responsive($device) {
+    @if $device == 'iphone' {
+        @media screen and (min-width: $minIphone) and ( max-width: $maxIphone) {
+            @content;
+        }
+
+    } @else if $device == 'tablet' {
+        @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+            @content;
+        }
+
+    } @else if $device == 'iphone-l' {
+        @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+            @content;
+        }
+
+    } @else if $device == "ipad-l" {
+        @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+@mixin phoneCommonStyle {
+    background-color: red;
+    color: white;
+    border-radius: 6px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.4rem;
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 
 %button {
@@ -98,6 +137,30 @@ h2 {
         font-weight: $fontBold;
     }
 } 
+
+.Iphone {
+    @include phoneCommonStyle;
+
+    @include responsive("iphone") {
+        color: white;
+        background: lightcoral;
+    }
+
+    @include responsive("tablet") {
+        color: white;
+        background: violet;
+    }
+
+    @include responsive("iphone-l") {
+        color: white;
+        background: lightseagreen;
+    }
+
+    @include responsive("ipad-l") {
+        color: white;
+        background: yellowgreen;
+    }
+}
 
 .byeBtn {
     @extend %button;

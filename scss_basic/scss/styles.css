@@ -54,4 +54,47 @@ h2 {
   color: red;
   font-weight: bolder;
 }
+
+.Iphone {
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.4rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 500px) and (max-width: 690px) {
+  .Iphone {
+    color: white;
+    background: lightcoral;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1120px) {
+  .Iphone {
+    color: white;
+    background: violet;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 690px) and (orientation: landscape) {
+  .Iphone {
+    color: white;
+    background: lightseagreen;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1120px) and (orientation: landscape) {
+  .Iphone {
+    color: white;
+    background: yellowgreen;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
