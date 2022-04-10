@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 2s ease-in-out linear;
+  transition: all 2s ease-in-out linear;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body aside {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  overflow-y: scroll;
+  padding: 4rem;
+  background: #e0e0e0;
+}
+
+body aside::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body aside::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body aside::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+body aside header {
+  font-size: 5rem;
+  font-weight: 400;
+  color: red;
+  line-height: 5rem;
+}
+
+body aside .subTitle {
+  color: red;
+  padding: 3rem 3rem 1.6rem 0;
+  font-size: 1.8rem;
+}
+
+body aside .context {
+  color: red;
+  padding: 0 3rem 1.6rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+body aside .linkBox div:nth-child(1) {
+  margin-bottom: 0.6rem;
+}
+
+body aside .linkBox div:nth-child(1) a {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.1rem;
+}
+
+body aside .linkBox div:nth-child(2) {
+  margin-bottom: 1rem;
+}
+
+body aside .linkBox div:nth-child(2) a {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.1rem;
+}
+
+body aside footer {
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding: 1rem 5rem 0 0;
+}
+
+body main {
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+  background: #e7473c;
+  padding-top: 10rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+body main .mainHeader {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 40%;
+  width: 60%;
+  background: #e7473c;
+  z-index: 1;
+}
+
+body main .mainHeader a span {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0.4rem 0 0.4rem;
+}
+
+body main .videoBox .videoHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .videoBox .videoHeader .videoTitle {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+}
+
+body main .videoBox .videoHeader .videoTitle .shobMark {
+  display: none;
+}
+
+body main .videoBox .videoHeader p {
+  font-size: 1rem;
+  color: white;
+  font-weight: normal;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body main .videoBox .videoBoxContent {
+  position: relative;
+}
+
+body main .videoBox .videoBoxContent .videoNum {
+  color: white;
+  background: #af3b3b;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 0.8rem #565656 inset, 2px 3px 5px black;
+          box-shadow: 0px 0px 0.8rem #565656 inset, 2px 3px 5px black;
+  position: relative;
+  top: 5rem;
+  left: -1rem;
+}
+
+body main .videoBox .videoBoxContent .videoNum span {
+  font-size: 1.4rem;
+}
+
+body main .videoBox .videoBoxContent .videoContentBox video {
+  width: 95%;
+  border-radius: 10px;
+}
+
+body main .videoBox .videoBoxContent .videoContentBox .videoExplain {
+  color: white;
+  margin: 1.4rem;
+  font-size: large;
+}
+
+body main .videoBox .videoBoxContent .videoIndexNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #af3b3b;
+  color: white;
+  position: absolute;
+  top: 2.7rem;
+  right: 0.3rem;
+  -webkit-box-shadow: 0px 0px 0.8rem #565656 inset, 2px 3px 5px #ababab;
+          box-shadow: 0px 0px 0.8rem #565656 inset, 2px 3px 5px #ababab;
+  border-radius: 5px;
+}
+
+body main .videoBox .videoBoxContent .videoIndexNum div {
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+}
+
+body main .videoBox .videoBoxContent .videoIndexNum .btn {
+  background: #af3b3b;
+  color: white;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 0.8rem #565656 inset;
+          box-shadow: 0px 0px 0.8rem #565656 inset;
+  cursor: pointer;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@ $title: 32px;
 $fontBasicColor: red;
 $fontBold: bolder;
 $hoverColor: #a4ffa4;
-$linkColor:lightcoral; 
+$linkColor: lightcoral;
 
 $minIphone: 500px;
 $maxIphone: 690px;
@@ -28,15 +28,15 @@ $maxTablet: 1120px;
 //         &:nth-child(4n + 1) {
 //             @include link($linkColor);
 //         }
-    
+
 //         &:nth-child(4n + 2) {
 //             @include link(red);
 //         }
-    
+
 //         &:nth-child(4n + 3) {
 //             @include link(blue);
 //         }
-    
+
 //         &:nth-child(4n + 4) {
 //             @include link(green);
 //         }
@@ -44,124 +44,121 @@ $maxTablet: 1120px;
 // }
 
 @mixin link($word) {
-    text-decoration: none;
-    font-size: 30px;
-    margin-bottom: 12px;
-    @if $word == 'odd' {
-        color: blue;
-    } @else {
-        color: red;
-    }
-    font-weight: $fontBold;
-    display: block;
+  text-decoration: none;
+  font-size: 30px;
+  margin-bottom: 12px;
+  @if $word == 'odd' {
+    color: blue;
+  } @else {
+    color: red;
+  }
+  font-weight: $fontBold;
+  display: block;
 }
 
 @mixin responsive($device) {
-    @if $device == 'iphone' {
-        @media screen and (min-width: $minIphone) and ( max-width: $maxIphone) {
-            @content;
-        }
-
-    } @else if $device == 'tablet' {
-        @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
-            @content;
-        }
-
-    } @else if $device == 'iphone-l' {
-        @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
-            @content;
-        }
-
-    } @else if $device == "ipad-l" {
-        @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
-            @content;
-        }
+  @if $device == 'iphone' {
+    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) {
+      @content;
     }
+  } @else if $device == 'tablet' {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      @content;
+    }
+  } @else if $device == 'iphone-l' {
+    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $device == 'ipad-l' {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
+      @content;
+    }
+  }
 }
 
 @mixin phoneCommonStyle {
-    background-color: red;
-    color: white;
-    border-radius: 6px;
-    width: fit-content;
-    height: fit-content;
-    padding: 0.4rem;
-    font-size: 1rem;
-    margin-top: 1rem;
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.4rem;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
 %button {
-    border-radius: 7px;
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    background-color: powderblue;
+  border-radius: 7px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: powderblue;
 }
 
 .linkBox {
-    a {
-        margin-bottom: 10px;
+  a {
+    margin-bottom: 10px;
 
-        &:nth-child(odd) {
-            @include link("odd");
-        }
-
-        &:nth-child(even) {
-            @include link("even");
-        }
+    &:nth-child(odd) {
+      @include link('odd');
     }
+
+    &:nth-child(even) {
+      @include link('even');
+    }
+  }
 }
 
 h2 {
-    color: $fontBasicColor;
-    font-size: $title;
-    font-weight: $fontBold;
+  color: $fontBasicColor;
+  font-size: $title;
+  font-weight: $fontBold;
 }
 
 .box {
-    margin-top: 20px;
+  margin-top: 20px;
+  &:hover {
+    background-color: $hoverColor;
+  }
+
+  h2 {
+    color: blue;
     &:hover {
-        background-color: $hoverColor;
+      background-color: red;
     }
+  }
 
-    h2 {
-        color: blue;
-        &:hover {
-            background-color: red;
-        }
-    }
-
-    button {
-        @extend %button;
-        color: red;
-        font-weight: $fontBold;
-    }
-} 
+  button {
+    @extend %button;
+    color: red;
+    font-weight: $fontBold;
+  }
+}
 
 .Iphone {
-    @include phoneCommonStyle;
+  @include phoneCommonStyle;
 
-    @include responsive("iphone") {
-        color: white;
-        background: lightcoral;
-    }
+  @include responsive('iphone') {
+    color: white;
+    background: lightcoral;
+  }
 
-    @include responsive("tablet") {
-        color: white;
-        background: violet;
-    }
+  @include responsive('tablet') {
+    color: white;
+    background: violet;
+  }
 
-    @include responsive("iphone-l") {
-        color: white;
-        background: lightseagreen;
-    }
+  @include responsive('iphone-l') {
+    color: white;
+    background: lightseagreen;
+  }
 
-    @include responsive("ipad-l") {
-        color: white;
-        background: yellowgreen;
-    }
+  @include responsive('ipad-l') {
+    color: white;
+    background: yellowgreen;
+  }
 }
 
 .byeBtn {
-    @extend %button;
+  @extend %button;
 }
